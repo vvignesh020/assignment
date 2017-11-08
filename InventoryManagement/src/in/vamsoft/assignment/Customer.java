@@ -1,9 +1,9 @@
 package in.vamsoft.assignment;
 
-class Customer {
+public class Customer {
 	int cust_id;
 	String cust_name;
-	int contact_no;
+	long contact_no;
 
 
 	public int getCust_id() {
@@ -36,7 +36,7 @@ class Customer {
 	}
 
 
-	Customer(int cust_id, String cust_name, long contact_no) {
+	public Customer(int cust_id, String cust_name, long contact_no) {
 		this.cust_id = cust_id;
 		this.cust_name = cust_name;
 		this.contact_no = contact_no;

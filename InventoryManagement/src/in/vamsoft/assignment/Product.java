@@ -45,6 +45,15 @@ public class Product {
 	public void setQuantity(long quantity) {
 		this.quantity = quantity;
 	}
+public Product() {
+	
+}
+
+	@Override
+public String toString() {
+	return "Product [prod_id=" + prod_id + ", prod_name=" + prod_name + ", prod_price=" + prod_price + ", quantity="
+			+ quantity + "]\n";
+}
 
 
 	public Product(int prod_id, String prod_name, double prod_price, long quantity) {
