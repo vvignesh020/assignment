@@ -1,49 +1,118 @@
 package in.vamsoft.assignment;
 
+import java.util.ArrayList;
+import org.apache.log4j.Logger;
+
 public class Customer {
-	int cust_id;
-	String cust_name;
-	long contact_no;
+  private static final Logger logger = Logger.getLogger(Customer.class);
+  int custid;
+  String custname;
+  long contactno;
 
+  /**
+   * @return customer id.
+   */
+  public int getCust_id() {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering getCust_id()");
+      logger.debug("exiting getCust_id()");
+      logger.debug("returning: " + custid);
+    }
+    return custid;
+  }
 
-	public int getCust_id() {
-		return cust_id;
-	}
+  /**
+   * @param custid.
+   */
+  public void setCust_id(int custid) {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering setCust_id(int)");
+      logger.debug("cust_id: " + custid);
+    }
+    this.custid = custid;
+    if (logger.isDebugEnabled()) {
+      logger.debug("exiting setCust_id()");
+    }
+  }
 
+  /**
+   * @return customer name.
+   */
+  public String getCust_name() {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering getCust_name()");
+      logger.debug("exiting getCust_name()");
+      logger.debug("returning: " + custname);
+    }
+    return custname;
+  }
 
-	public void setCust_id(int cust_id) {
-		this.cust_id = cust_id;
-	}
+  /**
+   * @param cust_name.
+   */
+  public void setCust_name(String custname) {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering setCust_name(String)");
+      logger.debug("cust_name: \"" + custname + "\"");
+    }
+    this.custname = custname;
+    if (logger.isDebugEnabled()) {
+      logger.debug("exiting setCust_name()");
+    }
+  }
 
+  /**
+   * @return contact.
+   */
+  public long getContact_no() {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering getContact_no()");
+      logger.debug("exiting getContact_no()");
+      logger.debug("returning: " + contactno);
+    }
+    return contactno;
+  }
 
-	public String getCust_name() {
-		return cust_name;
-	}
+  /**
+   * @param contactno.
+   */
+  public void setContact_no(long contactno) {
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering setContact_no(long)");
+      logger.debug("contact_no: " + contactno);
+    }
+    this.contactno = contactno;
+    if (logger.isDebugEnabled()) {
+      logger.debug("exiting setContact_no()");
+    }
+  }
 
+  /**
+   * @param custid.
+   * @param custname.
+   * @param contactno.
+   */
+  public Customer(int custid, String custname, long contactno) {
+    this.custid = custid;
+    this.custname = custname;
+    this.contactno = contactno;
+  }
 
-	public void setCust_name(String cust_name) {
-		this.cust_name = cust_name;
-	}
+  ArrayList<Product> bookedProductList = new ArrayList<Product>();
 
+  /**
+   * @param obj.
+   */
+  public void addBookedProduct(Product obj) {
 
-	public long getContact_no() {
-		return contact_no;
-	}
+    if (logger.isDebugEnabled()) {
+      logger.debug("entering addBookedProduct(Product)");
+      logger.debug("obj: " + obj);
+    }
+    bookedProductList.add(obj);
+    if (logger.isDebugEnabled()) {
+      logger.debug("exiting addBookedProduct()");
+    }
+  }
 
-
-	public void setContact_no(long contact_no) {
-		this.contact_no = contact_no;
-	}
-
-
-	public Customer(int cust_id, String cust_name, long contact_no) {
-		this.cust_id = cust_id;
-		this.cust_name = cust_name;
-		this.contact_no = contact_no;
-	}
-	
-	
-	public void bookProduct() {
-		
-	}
 }
